@@ -7,7 +7,7 @@ $(document).ready(function() {
             this.classList.toggle("active");
             var content = this.parentElement.nextElementSibling;
             if (content.style.display === "block") {
-                content.style.display = "none";
+                content.style.display = "block2";
                 this.innerHTML = '<i class="fa fa-fw fa-angle-down"></i>Show abstract';
             } else {
                 content.style.display = "block";
