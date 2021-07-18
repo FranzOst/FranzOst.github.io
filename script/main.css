@@ -864,7 +864,8 @@ h1{
 }
 h2{
 	font-size:1.75rem;
-	margin:.875rem 0 .7rem 0
+	margin:.875rem 0 .7rem 0;
+	color:#326496
 }
 h3{
 	font-size:1.5rem;
@@ -1476,7 +1477,7 @@ section.post{
 	margin-bottom:15px
 }
 .post-description p{
-	margin:-2pt 0 0 0;
+	margin:-2pt 0 -2pt 4pt;
 	font-style:italic;
 	color:grey
 }
@@ -1507,7 +1508,8 @@ section.post{
 	font-size:90%
 }
 .post-journal{
-	font-weight:normal
+	font-weight:normal;
+	margin: 0 0 0 4pt
 }
 .post-title-link{
 	color:#42b983;
@@ -1735,4 +1737,7 @@ a.read-more{
 	background-color:#fefcfa;
 	color:#5f99cf;
 	border-color:#5f99cf
+}
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
 }
