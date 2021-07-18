@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400,400italic|Roboto+Mono);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*
+background-color fdfdfd (253 white)
+cover color fff3e1 (light peach)
+highlight font color 326496 (teal blue)
+*/
 html{
 	font-family:sans-serif;
 	-ms-text-size-adjust:100%;
@@ -231,13 +236,13 @@ footer{
 }
 footer .heart-icon{
 	color:#f83e4b;
-	text-shadow:0 0 5px #fefcfa,0 0 10px #f83e4b
+	text-shadow:0 0 5px #fdfdfd,0 0 10px #f83e4b
 }
 .related-articles{
 	margin-top:2em
 }
 .related-articles h4{
-	font-family:"macho","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif
+	font-family:"Fira Sans","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 .related-articles ul{
 	margin:0;
@@ -651,7 +656,7 @@ footer .heart-icon{
 .row .col.offset-s12{
 	margin-left:100%
 }
-@media only screen and (min-width:600px){
+@media only screen and (min-width:560px){
 	.row .col.m1{
 		width:8.3333333333%;
 		margin-left:0
@@ -825,7 +830,7 @@ footer .heart-icon{
 }
 html{
 	line-height:1.5;
-	font-family:"macho","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:"Fira Sans","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight:normal;
 	color:rgba(0,0,0,0.87);
 	-webkit-font-smoothing:antialiased;
@@ -909,10 +914,10 @@ p{
 	margin-bottom:20px;
 	padding:8px 20px;
 	font-size:0.875em;
-	font-family:"macho","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:"Fira Sans","Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight:700;
 	background-color:#42b983;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-width:2px !important;
 	border-style:solid !important;
 	border-color:#42b983;
@@ -920,67 +925,67 @@ p{
 	border-radius:5px
 }
 .btn:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#42b983
 }
 .btn:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#42b983;
 	border-color:#42b983
 }
 .btn-success{
 	background-color:#326496;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#326496
 }
 .btn-success:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#326496
 }
 .btn-success:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#326496;
 	border-color:#326496
 }
 .btn-warning{
 	background-color:#F5A623;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#F5A623
 }
 .btn-warning:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#F5A623
 }
 .btn-warning:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#F5A623;
 	border-color:#F5A623
 }
 .btn-danger{
 	background-color:#f83e4b;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#f83e4b
 }
 .btn-danger:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#f83e4b
 }
 .btn-danger:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#f83e4b;
 	border-color:#f83e4b
 }
 .btn-info{
 	background-color:#09ABF6;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#09ABF6
 }
 .btn-info:visited{
 	border-color:#09ABF6;
-	color:#fefcfa
+	color:#fdfdfd
 }
 .btn-info:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#09ABF6;
 	border-color:#09ABF6
 }
@@ -1243,10 +1248,10 @@ pre code span{
 }
 .intro{
 	font-size:120%;
-	margin-top:0
+	margin-top:12pt
 }
 .cover{
-	background-color:#f5f5f5;
+	background-color:#fff3e1;
 	position:fixed;
 	text-align:center;
 	width:100%;
@@ -1254,13 +1259,13 @@ pre code span{
 	padding:30px 15px 20px;
 	z-index:1
 }
-@media only screen and (min-width:600px){
+@media only screen and (min-width:560px){
 	.cover{
 		background-position:center;
 		padding:30px
 }
 }
-@media only screen and (min-width:992px){
+@media only screen and (min-width:820px){
 	.cover{
 		height:100vh;
 		position:initial;
@@ -1273,13 +1278,14 @@ pre code span{
 }
 .cover-card .avatar{
 	border-radius:5%;
-	width:300px;
+	width:212px;
 	height:auto;
 	float:none
 }
-@media only screen and (min-width:992px){
+@media only screen and (min-width:820px){
 	.cover-card .avatar{
-		margin-right:0
+		margin-right:0;
+		width:300px;
 }
 }
 .cover-card .author_name{
@@ -1299,31 +1305,31 @@ pre code span{
 	font-size:1.2em;
 	display:block
 }
-@media only screen and (min-width:992px){
+@media only screen and (min-width:820px){
 	.cover-card{
 		text-align:right;
 		margin:0 auto;
 		padding:0 0px 80px
 }
 }
-.social-links{
+.cover-card .social-links{
 	margin-top:0.5em;
 	margin-bottom:1em
 }
-.social-links ul{
+.cover-card .social-links ul{
 	margin:0;
 	padding:0
 }
-.social-links ul li{
+.cover-card .social-links ul li{
 	list-style:none;
 	display:block;
 	margin-left:1em;
 	margin-bottom:0.2em
 }
-.social-links ul li a.social-link-item{
+.cover-card .social-links ul li a.social-link-item{
 	color:#326496
 }
-.social-links ul li a.social-link-item:hover,.social-links ul li a.social-link-item:focus{
+.cover-card .social-links ul li a.social-link-item:hover,.social-links ul li a.social-link-item:focus{
 	color:#4c88c3
 }
 .nav-list{
@@ -1441,7 +1447,7 @@ ul.tag-cloud li a.post-tag{
 	margin:1em auto
 }
 .post-listing{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	position:absolute;
 	top:520px;
 	z-index:233;
@@ -1450,13 +1456,13 @@ ul.tag-cloud li a.post-tag{
 	-webkit-transform:translate3d(0,0,1px);
 	transform:translate3d(0,0,1px)
 }
-@media only screen and (min-width:600px){
+@media only screen and (min-width:560px){
 	.post-listing{
 		padding:30px 30px 0;
 		width:100%
 }
 }
-@media only screen and (min-width:992px){
+@media only screen and (min-width:820px){
 	.post-listing{
 		width:100%;
 		height:100vh;
@@ -1481,8 +1487,9 @@ section.post{
 	font-style:italic;
 	color:grey
 }
-.post-header h4{
-	margin-bottom:0px
+.post-header h4{ 
+	margin-bottom:2px;
+	line-height: 24px;
 }
 .post-header h5{
 	margin:-4pt 0 0 0
@@ -1541,8 +1548,8 @@ a.read-more{
 	padding:5px 8px
 }
 .button{
-	background-color:#fefcfa;
-	border:1px solid #fefcfa;
+	background-color:#fdfdfd;
+	border:1px solid #fdfdfd;
 	color:#326496;
 	padding:1px 5px 3px 5px;
 	text-align:center;
@@ -1556,11 +1563,11 @@ a.read-more{
 }
 .button:hover{
 	background-color:#326496;
-	color:#fefcfa;
-	border:1px solid #fefcfa
+	color:#fdfdfd;
+	border:1px solid #fdfdfd
 }
 .collapsible{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	border:1px solid #326496;
 	color:#326496;
 	cursor:pointer;
@@ -1572,7 +1579,7 @@ a.read-more{
 }
 .content{
 	padding:0 18px;
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	max-height:0;
 	overflow:hidden;
 	transition:max-height 0.4s ease-in-out
@@ -1662,7 +1669,7 @@ a.read-more{
 .share-buttons ul li span{
 	display:none
 }
-@media only screen and (min-width:600px){
+@media only screen and (min-width:560px){
 	.share-buttons ul li span{
 		display:inline;
 		margin:0.5em
@@ -1670,71 +1677,71 @@ a.read-more{
 }
 .twitter{
 	background-color:#77bcf1;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#77bcf1
 }
 .twitter:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#77bcf1
 }
 .twitter:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#77bcf1;
 	border-color:#77bcf1
 }
 .facebook{
 	background-color:#627aac;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#627aac
 }
 .facebook:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#627aac
 }
 .facebook:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#627aac;
 	border-color:#627aac
 }
 .google-plus{
 	background-color:#e36f60;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#e36f60
 }
 .google-plus:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#e36f60
 }
 .google-plus:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#e36f60;
 	border-color:#e36f60
 }
 .hacker-news{
 	background-color:#f60;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#f60
 }
 .hacker-news:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#f60
 }
 .hacker-news:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#f60;
 	border-color:#f60
 }
 .reddit{
 	background-color:#5f99cf;
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#5f99cf
 }
 .reddit:visited{
-	color:#fefcfa;
+	color:#fdfdfd;
 	border-color:#5f99cf
 }
 .reddit:hover{
-	background-color:#fefcfa;
+	background-color:#fdfdfd;
 	color:#5f99cf;
 	border-color:#5f99cf
 }
