@@ -29,14 +29,12 @@
   <link href="css/all.css" rel="stylesheet" />
   <!--load all font-awesome styles -->
   <link rel="stylesheet" href="css/main.css" />
-
   <link rel="stylesheet" href="css/font.css" />
 
   <link rel="canonical" href="https://franzostrizek.com/" />
 
   <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="https://franzostrizek.com/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="https://franzostrizek.com/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G25KZ5Q51G"></script>
 	<script>
@@ -49,27 +47,15 @@
 </head>
 
 <body>
-  <div class="row">
     <div class="col s12 m4">
       <div class="table cover">
-        <div class="cover-card table-cell table-top">
-          <a href="https://franzostrizek.com/">
+        <div class="sidepanel-content">
             <img src="img/avatar.jpg" alt="headshot of Franz Ostrizek" class="avatar" />
-          </a>
-
-          <a href="https://franzostrizek.com/" class="author_name">Franz Ostrizek</a>
+          <a class="author_name">Franz Ostrizek</a>
           <span class="author_job">Assistant Professor</span>
-          <span class="author_bio mbm">Sciences Po</span>
-          <!-- <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="https://franzostrizek.com/">home</a>
-      </li>
-         
-    </ul>
-  </nav> -->
-          <div class="social-links">
-            <ul>
+          <span class="author_bio">Sciences Po</span>
+
+            <ul class="social-links">
               <li>
                 <a href="CV_Ostrizek.pdf" class="social-link-item" target="_blank"><i class="fas fa-file-pdf"></i>
                   Curriculum Vitae</a>
@@ -79,12 +65,12 @@
                     class="fas fa-envelope"></i> franz.ostrizek@gmail.com</a>
               </li>
             </ul>
-          </div>
+
         </div>
       </div>
     </div>
     <div class="col s12 m8">
-      <div class="post-listing">
+      <div class="mainpanel">
         <div style="max-width: 1200px;">
           <p class="intro">
             I am an assistant professor at Sciences Po and a research affiliate at briq. Before joining Sciences Po, I received a PhD at Princeton University and spent two years as a postdoc at briq and University of Bonn.
@@ -92,45 +78,38 @@
             My research interests are in microeconomic theory and behavioral economics.
           </p>
 
-          <h2>Working papers</h2>
+          <h2>Working Papers</h2>
 
-          <section class="post">
-            <header class="post-header">
-              <ul class="paper-header">
-                <li>
-                  <h4>
-                    <a href="papers/vague.pdf" class="post-title"
-                      title="Vague by Design: Performance Evaluation and Learning from Wages">
+          <article class="paper">
+            <header class="paper-header">
+				<h3 class="paper-title">
+                    <a href="papers/vague.pdf" class="post-title">
                       Vague by Design: Performance Evaluation and Learning from Wages
                     </a>
-                  </h4>
+				</h3>
+				<!--<ul class="paper-journal">
+                <li>
+                        The Review of Economic Studies, 90(4), 2042–2082 (2023)
                 </li>
-                <!--<li>
-                    <h5>
-                      <i class="post-journal">R&amp;R at </i>
-                    </h5>
-                  </li> -->
-              </ul>
+                <li>
+                  Extended Abstract in EC '21: Proceedings of the 22nd ACM
+                    Conference on Economics and Computation
+                </li>
+              </ul> -->
             </header>
 
-            <div class="post-description">
-              <p>
-                Why wouldn't a firm gather and use all information about worker performance?
-              </p>
-            </div>
+            <div class="paper-details">
+				<p class="tagline">Why wouldn't a firm gather and use all information about worker performance?
+				</p>
+				<div>
+				  <a href="papers/vague.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
 
-            <p style="text-align: left; margin: -2px 0 0 0;">
-              <a href="papers/vague.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-
-              <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
-              <span style="float: right; padding-top: 5px;">
-                <i class="date">
-                  This Version: May 2022
-                </i>
-              </span>
-            </p>
-            <div class="content">
-              <p style="margin: 0px; text-align: justify;">
+				  <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
+				  <span class="paper-date">
+					<i>This Version: May 2022</i>
+				  </span>
+				</div>
+              <p class="paper-abstract">
                 We study a dynamic principal-agent setting in which both sides learn about the importance of effort. The
                 quality of the agent’s output is not observed directly. Instead, the principal jointly designs an
                 evaluation
@@ -138,8 +117,7 @@
                 promotes learning, which is shown to increase future agency costs. As a result, the optimal evaluation
                 technology is both
                 imprecise and tough: a bad performance is always sanctioned, but a good one is not always recognized.
-              </p>
-              <p style="margin: 0px; text-align: justify;">
+				<br>
                 We also study the case in which principal and agent have different priors, for instance because the
                 agent is overconfident.
                 Then, the principal uses a tough evaluation structure to preserve the agent’s profitable misperception.
@@ -148,206 +126,165 @@
                 lenient if learning is too costly.
               </p>
             </div>
-          </section>
+          </article>
 
-          <section class="post">
-            <header class="post-header">
-              <ul class="paper-header">
-                <li>
-                  <h4>
-                    <a href="papers/Transparency.pdf" class="post-title"
-                      title="Acquisition, (Mis)use and Dissemination of Information: The Blessing of Cursedness and Transparency">
-                      Acquisition, (Mis)use and Dissemination of Information: The Blessing of Cursedness and
-                      Transparency
-                    </a>
-                    <span class="post-coauthors">
-                      <nobr>(with <a href="https://sites.google.com/view/elia-sartori/home" class="coauthor">Elia
-                          Sartori</a>)</nobr>
-                    </span>
-                  </h4>
-                </li>
-                <!-- <li>
-                    <h5>
-                      <i class="post-journal">R&amp;R at the Review of Economic Studies</i>
-                    </h5>
-                  </li> -->
-              </ul>
-            </header>
+			<article class="paper">
+			  <header class="paper-header">
+				<h3 class="paper-title">
+				  <a href="papers/Transparency.pdf">
+					Acquisition, (Mis)use and Dissemination of Information: The Blessing of Cursedness and
+					Transparency
+				  </a>
+				  <span class="paper-coauthors">
+					<nobr>(with <a href="https://sites.google.com/view/elia-sartori/home" class="coauthor">Elia
+						Sartori</a>)</nobr>
+				  </span>
+				</h3>
+				<!-- Uncomment the next lines if the paper journal information is to be added
+				<ul class="paper-journal">
+				  <li>R&amp;R at the Review of Economic Studies</li>
+				</ul>
+				-->
+			  </header>
 
-            <div class="post-description">
-              <p>
-                How does inferential naivete affect information acquisition, information use, and information
-                dissemination?
-              </p>
-            </div>
+			  <div class="paper-details">
+				<p class="tagline">
+				  How does inferential naivete affect information acquisition, information use, and information dissemination?
+				</p>
+				<div>
+				  <a href="papers/Transparency.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+				  <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
+				  <span class="paper-date">
+					<i>This Version: May 2023</i>
+				  </span>
+				</div>
+				<p class="paper-abstract">
+				  We investigate the impact of transparency (and other information policies) in settings where, consistent with empirical evidence, agents underinfer from equilibrium statistics. We adapt cursed equilibrium to a beauty contest game. To discipline information acquisition with mislearning, we propose a subjective envelope condition which allows for a tractable analysis while maintaining behaviorally plausible assumptions: agents correctly anticipate their actions but incorrectly deem them optimal. We show that this condition characterizes the rest points of a simple learning process.
+					<br>
+				  Cursed agents use and acquire more private information, creating a positive externality. Welfare increases for low degrees of cursedness, as these gains exceed the losses from incorrect use. Transparency crowds out private information but always increases welfare. Policies targeting fundamental information may backfire as they distract cursed agents from a source of information they already underuse. We also investigate the behavior and welfare of an atomistic rational agent in a cursed economy.
+				</p>
+			  </div>
+			</article>
 
-            <p style="text-align: left; margin: -2px 0 0 0;">
-              <a href="papers/Transparency.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
 
-              <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
-              <span style="float: right; padding-top: 5px;">
-                <i class="date">
-                  This Version: May 2023
-                </i>
-              </span>
-            </p>
-            <div class="content">
-              <p style="margin: 0px; text-align: justify;">
-                We investigate the impact of transparency (and other information policies) in settings where, consistent with empirical evidence, agents underinfer from equilibrium statistics. We adapt cursed equilibrium to a beauty contest game. To discipline information acquisition with mislearning, we propose a subjective envelope condition which allows for a tractable analysis while maintaining behaviorally plausible assumptions: agents correctly anticipate their actions but incorrectly deem them optimal. We show that this condition characterizes the rest points of a simple learning process.
-			  </p>
-			  <p style="margin: 0px; text-align: justify;">
-				Cursed agents use and acquire more private information, creating a positive externality. Welfare increases for low degrees of cursedness, as these gains exceed the losses from incorrect use. Transparency crowds out private information but always increases welfare. Policies targeting fundamental information may backfire as they distract cursed agents from a source of information they already underuse. We also investigate the behavior and welfare of an atomistic rational agent in a cursed economy.
-              </p>
-            </div>
-          </section>
 
           <h2>Published and Accepted Papers</h2>
 
 
-
-
-          <section class="post">
-            <header class="post-header">
-              <ul class="paper-header">
-                <li>
-                  <h4>
-                    <a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832" class="post-title"
-                      title="Screening with Frames">Screening with Frames: Implementation in Extensive Form</a>
-
-                    <span class="post-coauthors">
+		<article class="paper">
+		    <header class="paper-header">
+				<h3 class="paper-title">
+					<a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832">
+						Screening with Frames: Implementation in Extensive Form
+					</a>
+					<span class="paper-coauthors">
                       <nobr>(with <a href="http://denisshishkin.com/" class="coauthor">Denis Shishkin</a>)</nobr>
-                    </span>
-                    <span style="float: right;">
-                      <i class="post-journal">
-                        The Review of Economic Studies, 90(4), 2042–2082 (2023)
-                      </i>
-                    </span>
-                  </h4>
-                </li>
+					</span>					
+				</h3>
+				<ul class="paper-journal">
                 <li>
-                  <i class="post-journal">Extended Abstract in EC '21: Proceedings of the 22nd ACM
-                    Conference on Economics and Computation</i>
+                        The Review of Economic Studies 90(4), 2042–2082 (2023)
                 </li>
+                <!--- <li>
+                  Extended Abstract in EC '21: Proceedings of the 22nd ACM
+                    Conference on Economics and Computation
+                </li> --->
               </ul>
             </header>
-
-            <div class="post-description">
-              <p>
-                How can a principal use framing effects in extensive-form mechanisms?
-              </p>
-            </div>
-
-            <p style="text-align: left; margin: -2px 0 0 0;">
-              <a href="papers/screening_with_frames.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i>
-                PDF</a>
-
-              <a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832" class="button" target="_blank"><i
+			<div class="paper-details">
+				<p class="tagline">How can a principal use framing effects in extensive-form mechanisms?</p>
+				<div>
+					<a href="papers/screening_with_frames.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+<a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832" class="button" target="_blank"><i
                   class="fas fa-link"></i> RES</a>
 				  
               <a href="https://dl.acm.org/doi/10.1145/3465456.3467552" class="button" target="_blank"><i
-                  class="fas fa-link"></i> EC '21: Extended Abstract</a>
+                  class="fas fa-link"></i> ACM EC '21: Extended Abstract</a>
 
               <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
-            </p>
-            <div class="content">
-              <p style="margin: 0px; text-align: justify;">
-                We study a decision-framing design problem: a principal faces an agent with frame-dependent preferences
+				</div>
+				<p class="paper-abstract">
+We study a decision-framing design problem: a principal faces an agent with frame-dependent preferences
                 and designs an extensive form with a frame at each stage.
                 This allows the principal to circumvent incentive compatibility constraints by inducing dynamically
                 inconsistent choices of the sophisticated agent.
                 We show that a vector of contracts can be implemented if and only if it can be implemented using a
                 canonical extensive form, which has a simple high-low-high structure using only three stages and the two
                 highest frames, and employs unchosen decoy contracts to deter deviations.
-              </p>
-              <p style="margin: 0px; text-align: justify;">
-                We then turn to the study of optimal contracts in the context of the classic monopolistic screening
+					<br>
+We then turn to the study of optimal contracts in the context of the classic monopolistic screening
                 problem and establish the existence of a canonical optimal mechanism, even though our implementability
                 result does not directly apply.
                 In the presence of naive types, the principal can perfectly screen by cognitive type and extract full
                 surplus from naifs.
-              </p>
-            </div>
-          </section>
+				</p>
+			</div>
+		</article>
 
-          <section class="post">
-            <header class="post-header">
-              <ul class="paper-header">
-                <li>
-                  <h4>
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143" class="post-title"
-                      title="Screening while Controlling an Externality">Screening while Controlling an Externality</a>
 
-                    <span class="post-coauthors">
-                      <nobr>(with <a href="https://sites.google.com/view/elia-sartori/home" class="coauthor">Elia
-                          Sartori</a>)</nobr>
-                    </span>
-                    <span style="float: right;">
-                      <i class="post-journal">
-                        Games and Economic Behavior 139, 26-55 (2023)
-                      </i>
-                    </span>
-                  </h4>
-                </li>
-              </ul>
-            </header>
+<article class="paper">
+    <header class="paper-header">
+        <h3 class="paper-title">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143">Screening while Controlling an Externality</a>
+            <span class="paper-coauthors">
+                <nobr>(with <a href="https://sites.google.com/view/elia-sartori/home" class="coauthor">Elia
+                    Sartori</a>)</nobr>
+            </span>
+        </h3>
+        <ul class="paper-journal">
+            <li>
+                Games and Economic Behavior 139, 26-55 (2023)
+            </li>
+        </ul>
+    </header>
+    <div class="paper-details">
+        <p class="tagline">How to price discriminate when agents differ in their payoff-type and their influence on a global
+            externality?
+        </p>
+        <div>
+            <a href="papers/Susceptibility.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143" class="button" target="_blank"><i class="fas fa-link"></i> GEB</a>
+            <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
+        </div>
+        <p class="paper-abstract">
+            We propose a tractable framework to introduce externalities in a screening model. Agents differ in both
+            payoff-type and influence (how strongly their actions affect others). Applications range from pricing
+            network goods to regulating industries that create externalities. Inefficiencies arise only if the
+            payoff-type is unobservable. When both dimensions are unobserved, the optimal allocation satisfies
+            <i>lexicographic monotonicity</i>: increasing along the payoff-type to satisfy incentive compatibility,
+            but tilted towards influential agents to produce the externality. In particular, the allocation depends
+            on a private characteristic that is payoff-irrelevant for the agent. We characterize the solution
+            through a two-step ironing procedure that addresses the nonmonotonicity in virtual values arising from
+            the countervailing impact of payoff-types and influence. If observable, influence is used as a signal of
+            the payoff-type. We provide sufficient conditions for rents from influence to emerge even in a setting
+            featuring atomistic agents.
+        </p>
+    </div>
+</article>
+		  
 
-            <div class="post-description">
-              <p>
-                How to price discriminate when agents differ in their payoff-type and their influence on a global
-                externality?
-              </p>
-            </div>
+		  
 
-            <p style="text-align: left; margin: -2px 0 0 0;">
 
-              <a href="papers/Susceptibility.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-
-              <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143" class="button" target="_blank"><i class="fas fa-link"></i> GEB</a>
-
-              <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
-            </p>
-            <div class="content">
-              <p style="margin: 0px; text-align: justify;">
-                We propose a tractable framework to introduce externalities in a screening model. Agents differ in both
-                payoff-type and influence (how strongly their actions affect others). Applications range from pricing
-                network goods to regulating industries that create externalities. Inefficiencies arise only if the
-                payoff-type is unobservable. When both dimensions are unobserved, the optimal allocation satisfies
-                <i>lexicographic monotonicity</i>: increasing along the payoff-type to satisfy incentive compatibility,
-                but tilted towards influential agents to produce the externality. In particular, the allocation depends
-                on a private characteristic that is payoff-irrelevant for the agent. We characterize the solution
-                through a two-step ironing procedure that addresses the nonmonotonicity in virtual values arising from
-                the countervailing impact of payoff-types and influence. If observable, influence is used as a signal of
-                the payoff-type. We provide sufficient conditions for rents from influence to emerge even in a setting
-                featuring atomistic agents.
-              </p>
-            </div>
-            <p></p>
-          </section>
-
-          <section class="post">
-            <header class="post-header">
-              <ul class="paper-header">
-                <li>
-                  <h4>
-                    <a href="https://link.springer.com/article/10.1007/s40505-014-0057-1" class="post-title"
-                      title="TITLE">A note on consequentialism in a dynamic Savage framework: a comment on Ghirardato
+          <article class="paper">
+            <header class="paper-header">
+				<h3 class="paper-title">
+                    <a href="https://link.springer.com/article/10.1007/s40505-014-0057-1">A note on consequentialism in a dynamic Savage framework: a comment on Ghirardato
                       (2002)</a>
 
-                    <span class="post-coauthors">
+                    <span class="paper-coauthors">
                       <nobr>(with <a href="https://sites.google.com/site/joachimhubmer" class="coauthor">Joachim
                           Hubmer</a>)</nobr>
                     </span>
-                    <span style="float: right;">
-                      <i class="post-journal">
-                        Economic Theory Bulletin 3(2), 265–269 (2015)
-                      </i>
-                    </span>
-                  </h4>
-
-                </li>
-              </ul>
+				</h3>
+				<ul class="paper-journal">
+					<li>
+						Economic Theory Bulletin 3(2), 265–269 (2015)
+					</li>
+				</ul>				
             </header>
-          </section>
+          </article>
+
 
         </div>
 
@@ -356,11 +293,8 @@
         </footer>
       </div>
     </div>
-  </div>
   <script type="text/javascript" src="script/jquery-3.js"></script>
   <script type="text/javascript" src="script/collapse.js"></script>
-  <script type="text/javascript" src="script/collapse-slide.js"></script>
-  <script type="text/javascript" src="script/main.js"></script>
 </body>
 
 </html>
