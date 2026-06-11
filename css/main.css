@@ -8,6 +8,7 @@ highlight font color 326496 (teal blue)
   --background-color: #fdfdfd; /* (253 white) */
   --cover-color: #fff3e1; /* (light peach) */
   --highlight-font-color: #326496; /* teal blue */
+  interpolate-size: allow-keywords; /* lets <details> animate to height auto where supported */
 }
 html{
 	font-family:sans-serif;
@@ -299,36 +300,6 @@ p{
 		top:0
 }
 }
-.button{
-	background-color:var(--background-color);
-	border:1px solid var(--background-color);
-	color:var(--highlight-font-color);
-	padding:1px 5px 3px 5px;
-	text-align:center;
-	text-decoration:none;
-	display:inline-block;
-	font-size:20px;
-	margin:4px 2px;
-	cursor:pointer;
-	outline:none;
-	font-size:15px
-}
-.button:hover{
-	background-color:var(--highlight-font-color);
-	color:var(--background-color);
-	border:1px solid var(--background-color)
-}
-.collapsible{
-	background-color:var(--background-color);
-	border:1px solid var(--highlight-font-color);
-	color:var(--highlight-font-color);
-	cursor:pointer;
-	padding:5px;
-	border:none;
-	text-align:left;
-	outline:none;
-	font-size:15px
-}
 .twitter{
 	background-color:#77bcf1;
 	color:var(--background-color);
@@ -401,39 +372,116 @@ a.social-link-item{
 a.social-link-item:hover, a.social-link-item:focus, a.social-link-item:active{
 	color:#4c88c3
 }
+/* ───────────────────────── Papers ─────────────────────────
+   The markup template lives in a comment in index.html
+   (search for "HOW TO ADD A PAPER"). CSS decorates it:
+   coauthor parentheses, "This Version:" prefix, link icons,
+   and the abstract toggle (native <details>, no JS). */
 article.paper{
-	margin-bottom:15px	
+	margin-bottom:15px
 }
-
-article.paper header{
-	margin-bottom:2px;
-}
-.paper-journal{
-	list-style-type:none;
-	padding:0;
-	margin: 0 0 0 4pt
-}
-.paper-coauthors{
+.paper .coauthors{
 	font-weight:normal;
 	font-size:90%;
 	white-space:nowrap
 }
-.paper-details .tagline{
-	margin:-2pt 0 -2pt 4pt;
+.paper .coauthors::before{
+	content:"(with "
+}
+.paper .coauthors::after{
+	content:")"
+}
+.paper .journal{
+	margin:2px 0 0 4pt
+}
+.paper .tagline{
+	margin:0 0 0 4pt;
 	font-style:italic;
 	color:grey
 }
-.paper-date{
-	float: right;
-	/*padding-top: 5px;*/
+.paper .links{
+	margin:0
 }
-.paper-abstract{
-	padding:0 18px;
+.paper .links a{
+	display:inline-block;
 	background-color:var(--background-color);
-	max-height:0;
+	border:1px solid var(--background-color);
+	color:var(--highlight-font-color);
+	padding:1px 5px 3px 5px;
+	margin:4px 2px;
+	font-size:15px;
+	cursor:pointer
+}
+.paper .links a:hover,.paper .links a:focus{
+	background-color:var(--highlight-font-color);
+	color:var(--background-color)
+}
+/* automatic icons: generic link glyph by default, PDF glyph for
+   .pdf files, slides glyph for files ending in slides.pdf or links
+   with class="slides". A hand-placed <i> inside a link suppresses
+   the automatic glyph (rule at the end). New recurring types are
+   one line each, following the .slides pattern. */
+.paper .links a::before{
+	content:"\f0c1"; /* fa-link */
+	font-family:"Font Awesome 5 Free";
+	font-weight:900;
+	margin-right:0.4em
+}
+.paper .links a[href$=".pdf"]::before{
+	content:"\f1c1" /* fa-file-pdf */
+}
+.paper .links a[href$="slides.pdf"]::before,
+.paper .links a.slides::before{
+	content:"\f1c7" /* fa-file-powerpoint */
+}
+.paper .links a[href]:has(i)::before{
+	content:none
+}
+.paper .date{
+	float:right;
+	font-style:italic;
+	margin:4px 2px
+}
+.paper .date::before{
+	content:"This Version: "
+}
+/* abstract toggle */
+.paper .abstract summary{
+	display:inline-block;
+	cursor:pointer;
+	padding:5px;
+	font-size:15px;
+	color:var(--highlight-font-color);
+	list-style:none
+}
+.paper .abstract summary::-webkit-details-marker{
+	display:none
+}
+.paper .abstract summary::before{
+	content:"\f107"; /* fa-angle-down */
+	font-family:"Font Awesome 5 Free";
+	font-weight:900;
+	display:inline-block;
+	width:1.28em;
+	text-align:center;
+	transition:transform 0.2s ease
+}
+.paper .abstract[open] summary::before{
+	transform:rotate(180deg)
+}
+.paper .abstract p{
+	margin:0;
+	padding:0 18px;
+	font-size:11pt;
+	line-height:18px
+}
+/* slide-open animation; browsers without ::details-content support
+   simply toggle instantly */
+.paper .abstract::details-content{
+	block-size:0;
 	overflow:hidden;
-	transition:max-height 0.4s ease-in-out;
-	margin: 0;
-	line-height: 18px;
-	font-size: 11pt;
+	transition:block-size 0.4s ease-in-out,content-visibility 0.4s allow-discrete
+}
+.paper .abstract[open]::details-content{
+	block-size:auto
 }

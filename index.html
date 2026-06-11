@@ -83,55 +83,75 @@
 
           <h2>Working Papers</h2>
 
-          <article class="paper">
-            <header class="paper-header">
-              <h3 class="paper-title">
-                <a href="papers/vague.pdf">
-                  Vague by Design: Performance Evaluation and Learning from Wages
-                </a>
-              </h3>
-            </header>
+          <!-- ═══════════════ HOW TO ADD A PAPER ═══════════════
+            Copy the template below and fill it in. Every line except
+            the title is optional: delete any that don't apply.
 
-            <div class="paper-details">
-              <p class="tagline">Why wouldn't a firm gather and use all information about worker performance?</p>
-              <div>
-                <a href="papers/vague.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
-                <span class="paper-date">
-                  <i>This Version: Feb 2025</i>
-                </span>
-              </div>
-              <p class="paper-abstract">
+            <article class="paper">
+              <h3>
+                <a href="papers/FILE.pdf">TITLE</a>
+                <span class="coauthors"><a href="https://URL">NAME</a></span>
+              </h3>
+              <p class="journal">JOURNAL 12(3), 456–789 (2026)</p>
+              <p class="tagline">ONE-LINE PITCH?</p>
+              <p class="links">
+                <a href="papers/FILE.pdf" target="_blank">PDF</a>
+                <a href="https://DOI.URL" target="_blank">JOURNAL</a>
+                <span class="date">Feb 2026</span>
+              </p>
+              <details class="abstract">
+                <summary>Abstract</summary>
+                <p>ABSTRACT TEXT</p>
+              </details>
+            </article>
+
+            The CSS does the decoration:
+            * .coauthors renders as "(with NAME)" on the title line.
+            * .date renders right-aligned as "This Version: Feb 2026".
+            * Link icons are automatic: links ending in .pdf get a PDF
+              icon, links ending in slides.pdf (e.g. vague_slides.pdf)
+              get a slides icon, everything else a generic link icon.
+            * To force the slides icon regardless of filename:
+              <a href="..." class="slides">Slides</a>
+            * To hand-pick any other icon, put an explicit Font Awesome
+              icon inside the link; the automatic one then disappears:
+              <a href="..." target="_blank"><i class="fas fa-video"></i> Video</a>
+              New recurring icon types are one CSS line each; see the
+              "automatic icons" section in css/main.css.
+          ═══════════════════════════════════════════════════ -->
+
+          <article class="paper">
+            <h3>
+              <a href="papers/vague.pdf">Vague by Design: Performance Evaluation and Learning from Wages</a>
+            </h3>
+            <p class="tagline">Why wouldn't a firm gather and use all information about worker performance?</p>
+            <p class="links">
+              <a href="papers/vague.pdf" target="_blank">PDF</a>
+              <span class="date">Feb 2025</span>
+            </p>
+            <details class="abstract">
+              <summary>Abstract</summary>
+              <p>
                 We study a dynamic principal-agent setting in which both sides learn about the importance of effort. The quality of the agent’s output is not observed directly. Instead, the principal jointly designs an evaluation technology and a wage schedule. More precise performance evaluation reduces current agency costs but promotes learning, which can increase future agency costs. As a result, the optimal evaluation technology is noisy. Performance information that solely pertains to effort is revealed, while the principal optimally conceals information about the agent’s ability. The optimal evaluation features a censorship pattern with a base wage and tailored bonuses/penalties when the threshold is exceeded. With binary output, it is both imprecise and tough if effort and ability are strong complements: a bad performance is always sanctioned, but a good one is not always recognized.
               </p>
-            </div>
+            </details>
           </article>
 
           <article class="paper">
-            <header class="paper-header">
-              <h3 class="paper-title">
-                <a href="papers/Transparency.pdf">
-                  Acquisition, (Mis)use and Dissemination of Information: The Blessing of Cursedness and
-                  Transparency
-                </a>
-                <span class="paper-coauthors">(with <a href="https://sites.google.com/view/elia-sartori/home" class="coauthor">Elia Sartori</a>)</span>
-              </h3>
-              <ul class="paper-journal">
-                <li>ACM EC '24: Extended Abstract; R&amp;R at the Economic Journal</li>
-              </ul>
-            </header>
-
-            <div class="paper-details">
-              <p class="tagline">How does inferential naivete affect information acquisition, information use, and information dissemination?</p>
-              <div>
-                <a href="papers/Transparency.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                <a href="https://dl.acm.org/doi/10.1145/3670865.3673595" class="button" target="_blank"><i class="fas fa-link"></i> ACM EC '24: Extended Abstract</a>
-                <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
-                <span class="paper-date">
-                  <i>This Version: Aug 2024</i>
-                </span>
-              </div>
-              <p class="paper-abstract">
+            <h3>
+              <a href="papers/Transparency.pdf">Acquisition, (Mis)use and Dissemination of Information: The Blessing of Cursedness and Transparency</a>
+              <span class="coauthors"><a href="https://sites.google.com/view/elia-sartori/home">Elia Sartori</a></span>
+            </h3>
+            <p class="journal">ACM EC '24: Extended Abstract; R&amp;R at the Economic Journal</p>
+            <p class="tagline">How does inferential naivete affect information acquisition, information use, and information dissemination?</p>
+            <p class="links">
+              <a href="papers/Transparency.pdf" target="_blank">PDF</a>
+              <a href="https://dl.acm.org/doi/10.1145/3670865.3673595" target="_blank">ACM EC '24: Extended Abstract</a>
+              <span class="date">Aug 2024</span>
+            </p>
+            <details class="abstract">
+              <summary>Abstract</summary>
+              <p>
                 Adapting cursed equilibrium to a beauty contest game, we study the impact
                 of information policies in settings where agents underinfer from equilibrium
                 statistics. To discipline information acquisition with mislearning, we propose a
@@ -142,34 +162,26 @@
                 <br>
                 Cursed agents use and acquire more private information, creating a positive externality. Welfare increases for low degrees of cursedness, as these gains exceed the losses from incorrect use. Transparency crowds out private information but always increases welfare. Policies targeting fundamental information may backfire as they distract cursed agents from a source of information they already underuse. Finally, we investigate the behavior and welfare of an atomistic rational agent in a cursed economy.
               </p>
-            </div>
+            </details>
           </article>
 
           <h2>Published and Accepted Papers</h2>
 
-
           <article class="paper">
-            <header class="paper-header">
-              <h3 class="paper-title">
-                <a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832">
-                  Screening with Frames: Implementation in Extensive Form
-                </a>
-                <span class="paper-coauthors">(with <a href="http://denisshishkin.com/" class="coauthor">Denis Shishkin</a>)</span>
-              </h3>
-              <ul class="paper-journal">
-                <li>The Review of Economic Studies 90(4), 2042–2082 (2023)</li>
-              </ul>
-            </header>
-
-            <div class="paper-details">
-              <p class="tagline">How can a principal use framing effects in extensive-form mechanisms?</p>
-              <div>
-                <a href="papers/screening_with_frames.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                <a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832" class="button" target="_blank"><i class="fas fa-link"></i> RES</a>
-                <a href="https://dl.acm.org/doi/10.1145/3465456.3467552" class="button" target="_blank"><i class="fas fa-link"></i> ACM EC '21: Extended Abstract</a>
-                <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
-              </div>
-              <p class="paper-abstract">
+            <h3>
+              <a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832">Screening with Frames: Implementation in Extensive Form</a>
+              <span class="coauthors"><a href="http://denisshishkin.com/">Denis Shishkin</a></span>
+            </h3>
+            <p class="journal">The Review of Economic Studies 90(4), 2042–2082 (2023)</p>
+            <p class="tagline">How can a principal use framing effects in extensive-form mechanisms?</p>
+            <p class="links">
+              <a href="papers/screening_with_frames.pdf" target="_blank">PDF</a>
+              <a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832" target="_blank">RES</a>
+              <a href="https://dl.acm.org/doi/10.1145/3465456.3467552" target="_blank">ACM EC '21: Extended Abstract</a>
+            </p>
+            <details class="abstract">
+              <summary>Abstract</summary>
+              <p>
                 We study a decision-framing design problem: a principal faces an agent with frame-dependent preferences
                 and designs an extensive form with a frame at each stage.
                 This allows the principal to circumvent incentive compatibility constraints by inducing dynamically
@@ -184,29 +196,23 @@
                 In the presence of naive types, the principal can perfectly screen by cognitive type and extract full
                 surplus from naifs.
               </p>
-            </div>
+            </details>
           </article>
 
-
           <article class="paper">
-            <header class="paper-header">
-              <h3 class="paper-title">
-                <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143">Screening while Controlling an Externality</a>
-                <span class="paper-coauthors">(with <a href="https://sites.google.com/view/elia-sartori/home" class="coauthor">Elia Sartori</a>)</span>
-              </h3>
-              <ul class="paper-journal">
-                <li>Games and Economic Behavior 139, 26-55 (2023)</li>
-              </ul>
-            </header>
-
-            <div class="paper-details">
-              <p class="tagline">How to price discriminate when agents differ in their payoff-type and their influence on a global externality?</p>
-              <div>
-                <a href="papers/Susceptibility.pdf" class="button" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143" class="button" target="_blank"><i class="fas fa-link"></i> GEB</a>
-                <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
-              </div>
-              <p class="paper-abstract">
+            <h3>
+              <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143">Screening while Controlling an Externality</a>
+              <span class="coauthors"><a href="https://sites.google.com/view/elia-sartori/home">Elia Sartori</a></span>
+            </h3>
+            <p class="journal">Games and Economic Behavior 139, 26-55 (2023)</p>
+            <p class="tagline">How to price discriminate when agents differ in their payoff-type and their influence on a global externality?</p>
+            <p class="links">
+              <a href="papers/Susceptibility.pdf" target="_blank">PDF</a>
+              <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143" target="_blank">GEB</a>
+            </p>
+            <details class="abstract">
+              <summary>Abstract</summary>
+              <p>
                 We propose a tractable framework to introduce externalities in a screening model. Agents differ in both
                 payoff-type and influence (how strongly their actions affect others). Applications range from pricing
                 network goods to regulating industries that create externalities. Inefficiencies arise only if the
@@ -219,19 +225,15 @@
                 the payoff-type. We provide sufficient conditions for rents from influence to emerge even in a setting
                 featuring atomistic agents.
               </p>
-            </div>
+            </details>
           </article>
 
           <article class="paper">
-            <header class="paper-header">
-              <h3 class="paper-title">
-                <a href="https://link.springer.com/article/10.1007/s40505-014-0057-1">A note on consequentialism in a dynamic Savage framework: a comment on Ghirardato (2002)</a>
-                <span class="paper-coauthors">(with <a href="https://sites.google.com/site/joachimhubmer" class="coauthor">Joachim Hubmer</a>)</span>
-              </h3>
-              <ul class="paper-journal">
-                <li>Economic Theory Bulletin 3(2), 265–269 (2015)</li>
-              </ul>
-            </header>
+            <h3>
+              <a href="https://link.springer.com/article/10.1007/s40505-014-0057-1">A note on consequentialism in a dynamic Savage framework: a comment on Ghirardato (2002)</a>
+              <span class="coauthors"><a href="https://sites.google.com/site/joachimhubmer">Joachim Hubmer</a></span>
+            </h3>
+            <p class="journal">Economic Theory Bulletin 3(2), 265–269 (2015)</p>
           </article>
 
 
@@ -242,7 +244,6 @@
         </footer>
       </div>
     </div>
-  <script type="text/javascript" src="script/collapse.js"></script>
 </body>
 
 </html>
