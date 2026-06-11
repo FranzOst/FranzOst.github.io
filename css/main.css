@@ -392,15 +392,16 @@ article.paper{
 	content:")"
 }
 .paper .journal{
-	margin:2px 0 0 4pt
+	margin:0 0 2px 4pt
 }
 .paper .tagline{
-	margin:0 0 0 4pt;
+	margin:-2pt 0 -2pt 4pt;
 	font-style:italic;
 	color:grey
 }
 .paper .links{
-	margin:0
+	margin:0;
+	line-height:1.5
 }
 .paper .links a{
 	display:inline-block;
