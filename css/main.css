@@ -299,20 +299,6 @@ p{
 		top:0
 }
 }
-.twitter{
-	background-color:#77bcf1;
-	color:var(--background-color);
-	border-color:#77bcf1
-}
-.twitter:visited{
-	color:var(--background-color);
-	border-color:#77bcf1
-}
-.twitter:hover{
-	background-color:var(--background-color);
-	color:#77bcf1;
-	border-color:#77bcf1
-}
 .sidepanel-content {
   display: table-cell;
   vertical-align: top;
