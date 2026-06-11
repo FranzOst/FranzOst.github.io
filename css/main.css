@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400,400italic|Roboto+Mono);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /*
 background-color fdfdfd (253 white)
@@ -271,6 +270,9 @@ p{
 		width:100%
 }
 }
+.mainpanel-content{
+	max-width:1200px
+}
 .mainpanel{
 	background-color:var(--background-color);
 	position:absolute;
@@ -371,7 +373,7 @@ p{
 	color:var(--highlight-font-color);
 	font-size:1.75em;
 	font-weight:500;
-	margin-top:5px
+	margin:5px 0 0
 }
 .sidepanel-content .author_job{
 	display:block;
@@ -413,7 +415,8 @@ article.paper header{
 }
 .paper-coauthors{
 	font-weight:normal;
-	font-size:90%
+	font-size:90%;
+	white-space:nowrap
 }
 .paper-details .tagline{
 	margin:-2pt 0 -2pt 4pt;
