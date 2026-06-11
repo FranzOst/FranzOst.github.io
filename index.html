@@ -97,13 +97,17 @@
               <p class="links">
                 <a href="papers/FILE.pdf" target="_blank">PDF</a>
                 <a href="https://DOI.URL" target="_blank">JOURNAL</a>
+                <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
                 <span class="date">Feb 2026</span>
               </p>
-              <details class="abstract">
-                <summary>Abstract</summary>
-                <p>ABSTRACT TEXT</p>
-              </details>
+              <p class="abstract">
+                ABSTRACT TEXT
+              </p>
             </article>
+
+            Keep the button line only if there is an abstract;
+            script/collapse.js wires it to the .abstract of the same
+            article automatically.
 
             The CSS does the decoration:
             * .coauthors renders as "(with NAME)" on the title line.
@@ -127,14 +131,12 @@
             <p class="tagline">Why wouldn't a firm gather and use all information about worker performance?</p>
             <p class="links">
               <a href="papers/vague.pdf" target="_blank">PDF</a>
+              <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
               <span class="date">Feb 2025</span>
             </p>
-            <details class="abstract">
-              <summary>Abstract</summary>
-              <p>
-                We study a dynamic principal-agent setting in which both sides learn about the importance of effort. The quality of the agent’s output is not observed directly. Instead, the principal jointly designs an evaluation technology and a wage schedule. More precise performance evaluation reduces current agency costs but promotes learning, which can increase future agency costs. As a result, the optimal evaluation technology is noisy. Performance information that solely pertains to effort is revealed, while the principal optimally conceals information about the agent’s ability. The optimal evaluation features a censorship pattern with a base wage and tailored bonuses/penalties when the threshold is exceeded. With binary output, it is both imprecise and tough if effort and ability are strong complements: a bad performance is always sanctioned, but a good one is not always recognized.
-              </p>
-            </details>
+            <p class="abstract">
+              We study a dynamic principal-agent setting in which both sides learn about the importance of effort. The quality of the agent’s output is not observed directly. Instead, the principal jointly designs an evaluation technology and a wage schedule. More precise performance evaluation reduces current agency costs but promotes learning, which can increase future agency costs. As a result, the optimal evaluation technology is noisy. Performance information that solely pertains to effort is revealed, while the principal optimally conceals information about the agent’s ability. The optimal evaluation features a censorship pattern with a base wage and tailored bonuses/penalties when the threshold is exceeded. With binary output, it is both imprecise and tough if effort and ability are strong complements: a bad performance is always sanctioned, but a good one is not always recognized.
+            </p>
           </article>
 
           <article class="paper">
@@ -147,12 +149,11 @@
             <p class="links">
               <a href="papers/Transparency.pdf" target="_blank">PDF</a>
               <a href="https://dl.acm.org/doi/10.1145/3670865.3673595" target="_blank">ACM EC '24: Extended Abstract</a>
+              <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
               <span class="date">Aug 2024</span>
             </p>
-            <details class="abstract">
-              <summary>Abstract</summary>
-              <p>
-                Adapting cursed equilibrium to a beauty contest game, we study the impact
+            <p class="abstract">
+              Adapting cursed equilibrium to a beauty contest game, we study the impact
                 of information policies in settings where agents underinfer from equilibrium
                 statistics. To discipline information acquisition with mislearning, we propose a
                 subjective envelope condition which allows for a tractable analysis while maintaining
@@ -161,8 +162,7 @@
                 points of a simple learning process.
                 <br>
                 Cursed agents use and acquire more private information, creating a positive externality. Welfare increases for low degrees of cursedness, as these gains exceed the losses from incorrect use. Transparency crowds out private information but always increases welfare. Policies targeting fundamental information may backfire as they distract cursed agents from a source of information they already underuse. Finally, we investigate the behavior and welfare of an atomistic rational agent in a cursed economy.
-              </p>
-            </details>
+            </p>
           </article>
 
           <h2>Published and Accepted Papers</h2>
@@ -178,11 +178,10 @@
               <a href="papers/screening_with_frames.pdf" target="_blank">PDF</a>
               <a href="https://academic.oup.com/restud/article-abstract/90/4/2042/6767832" target="_blank">RES</a>
               <a href="https://dl.acm.org/doi/10.1145/3465456.3467552" target="_blank">ACM EC '21: Extended Abstract</a>
+              <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
             </p>
-            <details class="abstract">
-              <summary>Abstract</summary>
-              <p>
-                We study a decision-framing design problem: a principal faces an agent with frame-dependent preferences
+            <p class="abstract">
+              We study a decision-framing design problem: a principal faces an agent with frame-dependent preferences
                 and designs an extensive form with a frame at each stage.
                 This allows the principal to circumvent incentive compatibility constraints by inducing dynamically
                 inconsistent choices of the sophisticated agent.
@@ -195,8 +194,7 @@
                 result does not directly apply.
                 In the presence of naive types, the principal can perfectly screen by cognitive type and extract full
                 surplus from naifs.
-              </p>
-            </details>
+            </p>
           </article>
 
           <article class="paper">
@@ -209,11 +207,10 @@
             <p class="links">
               <a href="papers/Susceptibility.pdf" target="_blank">PDF</a>
               <a href="https://www.sciencedirect.com/science/article/pii/S0899825623000143" target="_blank">GEB</a>
+              <button type="button" class="collapsible"><i class="fa fa-fw fa-angle-down"></i>Show abstract</button>
             </p>
-            <details class="abstract">
-              <summary>Abstract</summary>
-              <p>
-                We propose a tractable framework to introduce externalities in a screening model. Agents differ in both
+            <p class="abstract">
+              We propose a tractable framework to introduce externalities in a screening model. Agents differ in both
                 payoff-type and influence (how strongly their actions affect others). Applications range from pricing
                 network goods to regulating industries that create externalities. Inefficiencies arise only if the
                 payoff-type is unobservable. When both dimensions are unobserved, the optimal allocation satisfies
@@ -224,8 +221,7 @@
                 the countervailing impact of payoff-types and influence. If observable, influence is used as a signal of
                 the payoff-type. We provide sufficient conditions for rents from influence to emerge even in a setting
                 featuring atomistic agents.
-              </p>
-            </details>
+            </p>
           </article>
 
           <article class="paper">
@@ -244,6 +240,7 @@
         </footer>
       </div>
     </div>
+  <script type="text/javascript" src="script/collapse.js"></script>
 </body>
 
 </html>

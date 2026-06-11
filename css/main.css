@@ -8,7 +8,6 @@ highlight font color 326496 (teal blue)
   --background-color: #fdfdfd; /* (253 white) */
   --cover-color: #fff3e1; /* (light peach) */
   --highlight-font-color: #326496; /* teal blue */
-  interpolate-size: allow-keywords; /* lets <details> animate to height auto where supported */
 }
 html{
 	font-family:sans-serif;
@@ -375,8 +374,9 @@ a.social-link-item:hover, a.social-link-item:focus, a.social-link-item:active{
 /* ───────────────────────── Papers ─────────────────────────
    The markup template lives in a comment in index.html
    (search for "HOW TO ADD A PAPER"). CSS decorates it:
-   coauthor parentheses, "This Version:" prefix, link icons,
-   and the abstract toggle (native <details>, no JS). */
+   coauthor parentheses, "This Version:" prefix, and link
+   icons. The abstract toggle button is wired up by
+   script/collapse.js. */
 article.paper{
 	margin-bottom:15px
 }
@@ -445,43 +445,23 @@ article.paper{
 .paper .date::before{
 	content:"This Version: "
 }
-/* abstract toggle */
-.paper .abstract summary{
-	display:inline-block;
+/* abstract toggle (button in the links row, handled by collapse.js) */
+.paper .links .collapsible{
+	background-color:var(--background-color);
+	color:var(--highlight-font-color);
+	border:none;
 	cursor:pointer;
 	padding:5px;
-	font-size:15px;
-	color:var(--highlight-font-color);
-	list-style:none
+	text-align:left;
+	outline:none;
+	font-size:15px
 }
-.paper .abstract summary::-webkit-details-marker{
-	display:none
-}
-.paper .abstract summary::before{
-	content:"\f107"; /* fa-angle-down */
-	font-family:"Font Awesome 5 Free";
-	font-weight:900;
-	display:inline-block;
-	width:1.28em;
-	text-align:center;
-	transition:transform 0.2s ease
-}
-.paper .abstract[open] summary::before{
-	transform:rotate(180deg)
-}
-.paper .abstract p{
+.paper .abstract{
 	margin:0;
 	padding:0 18px;
+	max-height:0;
+	overflow:hidden;
+	transition:max-height 0.4s ease-in-out;
 	font-size:11pt;
 	line-height:18px
-}
-/* slide-open animation; browsers without ::details-content support
-   simply toggle instantly */
-.paper .abstract::details-content{
-	block-size:0;
-	overflow:hidden;
-	transition:block-size 0.4s ease-in-out,content-visibility 0.4s allow-discrete
-}
-.paper .abstract[open]::details-content{
-	block-size:auto
 }
