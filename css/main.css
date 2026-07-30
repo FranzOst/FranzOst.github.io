@@ -357,6 +357,13 @@ a.social-link-item{
 a.social-link-item:hover, a.social-link-item:focus, a.social-link-item:active{
 	color:#4c88c3
 }
+/* Inline Academicons glyphs, sized to match the Font Awesome <i> icons. */
+svg.ai{
+	height:1em;
+	width:0.75em; /* 384/512 viewBox, same ratio as fa-file-pdf */
+	vertical-align:-0.125em;
+	fill:currentColor;
+}
 /* ───────────────────────── Papers ─────────────────────────
    The markup template lives in a comment in index.html
    (search for "HOW TO ADD A PAPER"). CSS decorates it:
